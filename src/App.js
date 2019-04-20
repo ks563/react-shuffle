@@ -13,8 +13,11 @@ class App extends Component {
     highScore: 0
   }
 
-  clickCount = id => {
-    
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
   }
 
 
@@ -22,20 +25,20 @@ class App extends Component {
     return (
       <div>
         <Navbar />
-        <Wrapper>
-          <Container>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+          <Jumbotron/>
+        <Container>
+          <Row>
+            <Col>
+              <Card
+                  
+              />
+            </Col>
+          </Row>
+           
 
           </Container>
 
-        </Wrapper>
+     
         <Footer/>
 
       </div>
