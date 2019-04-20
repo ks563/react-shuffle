@@ -8,6 +8,16 @@ import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 
 class App extends Component {
+  state={
+    score: 0,
+    highScore: 0
+  }
+
+  clickCount = id => {
+    
+  }
+
+
   render() {
     return (
       <div>
@@ -17,11 +27,11 @@ class App extends Component {
             <Card />
             <Card />
             <Card />
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
 
           </Container>
 
