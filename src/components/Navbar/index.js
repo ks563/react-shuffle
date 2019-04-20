@@ -11,11 +11,6 @@ function Navbar() {
                     </li>
                     <li className="nav-item">Click an Image to Begin!
                     </li>
-                    <li className="nav-item">
-                    </li>
-                    <li className="nav-item">
-                        Score: {props.score} | Top Score: {props.topScore}
-                    </li>
                 </ul>
             </div>
         </nav>
