@@ -1,21 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
 
-class Card extends Component {
-    constructor(props) {
-        super(props);
-
-        return (
-            <div
-                className="card"
-                style={{
-                    backgroundImage: props.image ? `url$(${props.image})` : "none"
-                }}
-            >
-                {/* set onClick for the entire card */}
+function Card(props) {
+    return (
+        <div className="card">
+            <div className="img-container">
+                <img alt={props.name} src={props.image}/>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default Card;
