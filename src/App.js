@@ -24,6 +24,21 @@ class App extends Component {
     });
   }
 
+  clickPicture = id => {
+    shuffleArray = (array) => {
+      let i = array.length - 1;
+      for (; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+      return array;
+    }
+    
+
+  }
+
 
   render() {
     return (
@@ -33,8 +48,22 @@ class App extends Component {
         <Container>
         <Wrapper>
           <Row>
-            <Col>
-              <Card
+              <Col>
+                 
+                  {this.state.images.map(image => {
+                    
+                    return (
+                      <Card
+                      id = { images.id }
+                        picture={images.image}
+                        />
+                    )
+                  
+                  }
+                  )}
+               
+
+              {/* <Card
                 id={images[0].id}
                   image={images[0].image}
                   
@@ -77,7 +106,7 @@ class App extends Component {
               />
                <Card
                 id={images[10].id}
-                image={images[10].image}  
+                image={images[10].image}   */}
               />
             </Col>
           </Row>
