@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Navbar from "./components/Navbar";
 import Container from "./components/Container";
 import Jumbotron from "./components/Jumbotron";
-import Row from "./components/Row";
-import Col from "./components/Col";
 import Card from "./components/Card";
 import Wrapper from "./components/Wrapper";
 import Footer from "./components/Footer";
@@ -76,14 +74,9 @@ class App extends Component {
                   picture={data.image}
                   clickPicture={this.clickPicture}
                 />
-              )
-            }
-            )}
+              )})}
           </Wrapper>
         </Container>
-
-
-
         <Footer />
 
       </div>
