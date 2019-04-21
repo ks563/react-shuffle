@@ -14,10 +14,15 @@ import './App.css';
 class App extends Component {
   state = {
     score: 0,
-    highScore: 0
+    highScore: 0,
+    hasBeenClicked: [],
+    cards: []
   }
 
- 
+  componentDidMount() {
+    this.setState({ cards: data})
+  }
+
   shuffleArray = (array) => {
     let i = array.length - 1;
     for (; i > 0; i--) {
@@ -26,30 +31,50 @@ class App extends Component {
       array[i] = array[j];
       array[j] = temp;
     }
-    return array;
+      this.setState({});
   }
 
-  clickPicture = event => {
-//changes score and highScore if the picture hasn't been clicked before
-    this.setState({score: this.state.score +1});
-    this.setState({ score: this.state.highScore + 1 });
-    //then shuffleArray();
-      //
-    
+  //after shuffle cards, reset card objects - do it inside shuffle array - set cards to whatever shuffle array is
+
+  clickPicture = id => {
+
+    //changes score and highScore if the picture hasn't been clicked before
+    let copyArr = [...this.state.hasBeenClicked]
+    if (copyArr.indexOf(id) > -1) {
+      //end game write alert refresh page
+    } else {
+      copyArr.push(id)
+      this.setState({
+        score: this.state.score + 1,
+        highScore: this.state.highScore + 1,
+        hasBeenClicked: copyArr
+      });
+      let arrayOfIds = data.map(data => {
+          return data.id
+      })
+      this.shuffleArray(arrayOfIds);
+    }
+   
   }
 
   render() {
     return (
       <div>
-        {/* <Navbar /> */}
+        <Navbar
+          score={this.state.score}
+          highScore={this.state.highScore}
+        
+        />
         <Jumbotron />
         <Container>
           <Wrapper>
-            {this.state.data.map(data => {
+            {this.state.cards && this.state.cards.map(data => {
               return (
                 <Card
+                  key={data.id}
                   id={data.id}
                   picture={data.image}
+                  clickPicture={this.clickPicture}
                 />
               )
             }
