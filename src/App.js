@@ -17,15 +17,7 @@ class App extends Component {
     highScore: 0
   }
 
-  //need code to track when an image has been clicked 
-
-
-  clickPicture = event => {
-//changes score and highScore
-      //click triggers shuffle array
-    
-  }
-
+ 
   shuffleArray = (array) => {
     let i = array.length - 1;
     for (; i > 0; i--) {
@@ -35,6 +27,15 @@ class App extends Component {
       array[j] = temp;
     }
     return array;
+  }
+
+  clickPicture = event => {
+//changes score and highScore if the picture hasn't been clicked before
+    this.setState({score: this.state.score +1});
+    this.setState({ score: this.state.highScore + 1 });
+    //then shuffleArray();
+      //
+    
   }
 
   render() {
