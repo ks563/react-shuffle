@@ -29,7 +29,9 @@ class App extends Component {
       array[i] = array[j];
       array[j] = temp;
     }
-      this.setState({});
+    this.setState({
+        cards: array
+      });
   }
 
   //after shuffle cards, reset card objects - do it inside shuffle array - set cards to whatever shuffle array is
@@ -47,10 +49,10 @@ class App extends Component {
         highScore: this.state.highScore + 1,
         hasBeenClicked: copyArr
       });
-      let arrayOfIds = data.map(data => {
-          return data.id
+      let arrToShuffle = data.map(data => {
+          return data
       })
-      this.shuffleArray(arrayOfIds);
+      this.shuffleArray(arrToShuffle);
     }
    
   }
