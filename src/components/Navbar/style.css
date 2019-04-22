@@ -1,6 +1,7 @@
 nav.navbar {
     margin-bottom: 0;
-    align-content: justify;
     overflow: auto;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
   }
   

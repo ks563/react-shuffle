@@ -57,6 +57,12 @@ class App extends Component {
    
   }
 
+  resetGame = () => {
+    //resets game 
+    //sets score to zero
+    //shuffles cards
+  }
+
   render() {
     return (
       <div>
