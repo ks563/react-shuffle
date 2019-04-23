@@ -45,7 +45,7 @@ class App extends Component {
         hasBeenClicked: []
       })
       copyArr = [];
-
+      alert("You lost a life. Game resets...now!");
     } else {
       copyArr.push(id)
       this.setState({

@@ -1,7 +1,13 @@
 nav.navbar {
-    margin-bottom: 0;
-    font-family: 'Open Sans', sans-serif;
-    color:#8b2e2e;
-    font-weight: bolder;
+    margin-bottom: 10;
+    font-family: 'Roboto', sans-serif;
+    color: #8b2e2e;
+    /* color: black; */
+    overflow: hidden;
   }
   
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }

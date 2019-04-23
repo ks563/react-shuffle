@@ -7,9 +7,11 @@
     display: flex;
     flex-flow: row wrap;
     padding: 20px;
+    border: 10px;
+    border-color:  #bebebe;
     justify-content: space-around;
     align-content: flex-start;
     overflow: auto;
     font-family: 'Open Sans', sans-serif;
-    background: none;
+    /* background: #bebebe; */
   }

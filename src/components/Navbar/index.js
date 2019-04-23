@@ -3,7 +3,7 @@ import "./style.css";
 
 function Navbar(props) {
     return (
-        <nav className="navbar fixed-top bg-none">
+        <nav className="navbar sticky">
             <div>
                 <ul className="navbar-nav">
                     <h4>Score: {props.score} | Highscore: {props.highScore}</h4>
