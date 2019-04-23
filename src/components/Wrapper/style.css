@@ -3,7 +3,7 @@
     margin: 10px;
     padding-top: 50px;
     height: 100%;
-    width:60%;
+    width:100%;
     display: flex;
     flex-flow: row wrap;
     padding: 20px;
@@ -11,4 +11,5 @@
     align-content: flex-start;
     overflow: auto;
     font-family: 'Open Sans', sans-serif;
+    background: none;
   }

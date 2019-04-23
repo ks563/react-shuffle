@@ -34,14 +34,18 @@ class App extends Component {
       });
   }
 
-  //after shuffle cards, reset card objects - do it inside shuffle array - set cards to whatever shuffle array is
-
   clickPicture = id => {
 
     //changes score and highScore if the picture hasn't been clicked before
     let copyArr = [...this.state.hasBeenClicked]
     if (copyArr.indexOf(id) > -1) {
-      //end game write alert refresh page
+      this.setState({
+        score: 0,
+        cards: data,
+        hasBeenClicked: []
+      })
+      copyArr = [];
+
     } else {
       copyArr.push(id)
       this.setState({
@@ -50,18 +54,12 @@ class App extends Component {
         hasBeenClicked: copyArr
       });
       let arrToShuffle = data.map(data => {
-          return data
+        return data
       })
       this.shuffleArray(arrToShuffle);
     }
-   
-  }
-
-  resetGame = () => {
-    //resets game 
-    //sets score to zero
-    //shuffles cards
-  }
+  } 
+  
 
   render() {
     return (
